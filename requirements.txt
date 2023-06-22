@@ -1,3 +1,6 @@
 Flask==2.3.2
 requests==2.31.0
 beautifulsoup4==4.12.2
+
+# Dev tools
+pipdeptree==2.9.3

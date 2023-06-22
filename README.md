@@ -14,6 +14,14 @@
 - static vs dynamic sites
 - changing page structure
 - authentication, hidden sites/pages
+- `urllib.request` 
+- regex
+  - re.findall()
+  - re.search()
+  - re.sub()
+  - `.` matches any character (except for line terminators)
+  - `*` matches the previous token between zero and unlimited times, as many times as possible, giving back as needed (greedy)
+  - `.*` greedy vs `.*?` lazy
 
 ## Tutorials used for this project
 
@@ -26,9 +34,13 @@
 - create virtual environment
 - install `requests` library/package
 - install `beautifulsoup4` library/package
-- create `main.py`
-- have fun `=)` 
+- create scripts
+- have fun `=)`
+- `python -i urllib_basic_scraper.py` - will first run program and then leave you in a REPL to explore your objects
 
+#### Troubleshooting
+
+- https://www.bannerbear.com/blog/what-is-a-cors-error-and-how-to-fix-it-3-ways/
 
 #### Diff commands/helpers
 
@@ -46,7 +58,6 @@ sys     0m0.036s
 python3 -m timeit '"-".join(str(n) for n in range(100))'
 
 
-
 ```
 
 ### Web tools
@@ -58,3 +69,20 @@ python3 -m timeit '"-".join(str(n) for n in range(100))'
 
 - [Pythonic HTML Parsing for Humans™](https://github.com/psf/requests-html)
 - `Selenium`
+- `Scrapy`
+- [`lxml`](https://realpython.com/python-xml-parser/#lxml-use-elementtree-on-steroids)
+
+
+##### Other
+
+We’re looking for:
+
+- Previous experience in HTML / API / XML scraping
+- Knowledge of Python or/and JavaScript (or other programming language)
+- Knowledge of CSS/Xpath Selectors
+- Understanding of REST, Ajax
+- Writing Regular Expressions
+- Background with Selenium or other Automation Testing Tools
+- Good skills to handle big amounts of data
+- Responsible and self-organized person
+- Excellent communication skills
