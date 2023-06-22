@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Real-Time Data Feed</title>
+</head>
+<body>
+    <script>
+        const ws = new WebSocket("ws://localhost:8000")
+        ws.onopen = event => {
+            ["keydown", "keyup"].forEach(name =>
+                window.addEventListener(name, event =>
+                    ws.send(`\
+<KeyboardEvent>
+    <Type>${event.type}</Type>
+    <Timestamp>${event.timeStamp}</Timestamp>
+    <Key>
+        <Code>${event.code}</Code>
+        <Unicode>${event.key}</Unicode>
+    </Key>
+    <Modifiers>
+        <Alt>${event.altKey}</Alt>
+        <Ctrl>${event.ctrlKey}</Ctrl>
+        <Shift>${event.shiftKey}</Shift>
+        <Meta>${event.metaKey}</Meta>
+    </Modifiers>
+</KeyboardEvent>`))
+            );
+            ["mousedown", "mouseup", "mousemove"].forEach(name =>
+                window.addEventListener(name, event =>
+                    ws.send(`\
+<MouseEvent>
+    <Type>${event.type}</Type>
+    <Timestamp>${event.timeStamp}</Timestamp>
+    <Cursor>
+        <Delta x="${event.movementX}" y="${event.movementY}"/>
+        <Window x="${event.clientX}" y="${event.clientY}"/>
+        <Screen x="${event.screenX}" y="${event.screenY}"/>
+    </Cursor>
+    <Buttons bitField="${event.buttons}"/>
+    <Modifiers>
+        <Alt>${event.altKey}</Alt>
+        <Ctrl>${event.ctrlKey}</Ctrl>
+        <Shift>${event.shiftKey}</Shift>
+        <Meta>${event.metaKey}</Meta>
+    </Modifiers>
+</MouseEvent>`))
+            )
+        }
+    </script>
+</body>
+</html>
