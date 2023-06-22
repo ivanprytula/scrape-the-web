@@ -1,24 +1,27 @@
-from flask import Flask, abort, make_response, redirect, render_template, request, url_for, flash, session
-from markupsafe import escape
-
 from logging.config import dictConfig
 
+from flask import (Flask, abort, flash, make_response, redirect,
+                   render_template, request, session, url_for)
+from markupsafe import escape
 
-dictConfig({
-    'version': 1,
-    'formatters': {'default': {
-        'format': '[%(asctime)s] %(levelname)s in %(module)s: %(message)s',
-    }},
-    'handlers': {'wsgi': {
-        'class': 'logging.StreamHandler',
-        'stream': 'ext://flask.logging.wsgi_errors_stream',
-        'formatter': 'default'
-    }},
-    'root': {
-        'level': 'WARNING',
-        'handlers': ['wsgi']
+dictConfig(
+    {
+        "version": 1,
+        "formatters": {
+            "default": {
+                "format": "[%(asctime)s] %(levelname)s in %(module)s: %(message)s",
+            }
+        },
+        "handlers": {
+            "wsgi": {
+                "class": "logging.StreamHandler",
+                "stream": "ext://flask.logging.wsgi_errors_stream",
+                "formatter": "default",
+            }
+        },
+        "root": {"level": "WARNING", "handlers": ["wsgi"]},
     }
-})
+)
 
 
 app = Flask(__name__)
@@ -56,7 +59,7 @@ def hello_world(name=None):
 def show_user_profile(username):
     # show the user profile for that user
     # app.logger.warning(username)
-    
+
     return f"User {escape(username)}"
 
 

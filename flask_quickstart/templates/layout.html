@@ -9,13 +9,13 @@
 <body>
 
     {% with messages = get_flashed_messages(with_categories=true) %}
-        {% if messages %}
-            <ul class=flashes>
-            {% for category, message in messages %}
-                <li class="{{ category }}">{{ message }}</li>
-            {% endfor %}
-            </ul>
-        {% endif %}
+    {% if messages %}
+    <ul class=flashes>
+        {% for category, message in messages %}
+        <li class="{{ category }}">{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
     {% endwith %}
 
     {% block body %}{% endblock %}
@@ -23,9 +23,9 @@
 
 
     {% if name %}
-        <h1>Hello, {{ name }}!</h1>
+    <h1>Hello, {{ name }}!</h1>
     {% else %}
-        <h1>Hello, World!</h1>
+    <h1>Hello, World!</h1>
     {% endif %}
 
 
