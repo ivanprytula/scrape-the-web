@@ -22,10 +22,12 @@
   - `.` matches any character (except for line terminators)
   - `*` matches the previous token between zero and unlimited times, as many times as possible, giving back as needed (greedy)
   - `.*` greedy vs `.*?` lazy
+- XML parsing with STL and 3rd-party libs
 
-## Tutorials used for this project
+## Tutorials used
 
 - https://realpython.com/beautiful-soup-web-scraper-python/
+- https://realpython.com/python-xml-parser/
   
 ### Project details: setup, run, troubleshooting
 
@@ -35,8 +37,7 @@
 - install `requests` library/package
 - install `beautifulsoup4` library/package
 - create scripts
-- have fun `=)`
-- `python -i urllib_basic_scraper.py` - will first run program and then leave you in a REPL to explore your objects
+- `python -i test.py` - will first run program and then leave you in a REPL to explore your objects
 
 #### Troubleshooting
 
