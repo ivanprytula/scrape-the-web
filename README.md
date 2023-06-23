@@ -1,6 +1,6 @@
 # Web scraping project
 
-## [WIP] High-level architecture
+## [WIP] High-level architecture / tech stack
 
 - **Web scraper**: You can use `Python` and `Beautifulsoup` to scrape data from websites that provide information. You can also use `Celery` to schedule periodic scraping tasks.
 - **Database**: You can store the scraped data in a `PostgreSQL` database.
@@ -14,7 +14,7 @@
 - static vs dynamic sites
 - changing page structure
 - authentication, hidden sites/pages
-- `urllib.request` 
+- `urllib.request`
 - regex
   - re.findall()
   - re.search()
@@ -28,7 +28,7 @@
 
 - https://realpython.com/beautiful-soup-web-scraper-python/
 - https://realpython.com/python-xml-parser/
-  
+
 ### Project details: setup, run, troubleshooting
 
 #### Local setup
@@ -63,7 +63,7 @@ python3 -m timeit '"-".join(str(n) for n in range(100))'
 
 - [Web Formatter](https://webformatter.com)
 - [JSON Formatter & Validator ](https://jsonformatter.curiousconcept.com/)
-  
+
 ### Related Python packages
 
 - [Pythonic HTML Parsing for Humans™](https://github.com/psf/requests-html)

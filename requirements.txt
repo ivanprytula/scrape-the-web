@@ -4,3 +4,4 @@ beautifulsoup4==4.12.2
 
 # Dev tools
 pipdeptree==2.9.3
+pre-commit==3.3.3
