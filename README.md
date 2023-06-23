@@ -1,6 +1,6 @@
 # Web scraping project
 
-## High-level architecture
+## [WIP] High-level architecture
 
 - **Web scraper**: You can use `Python` and `Beautifulsoup` to scrape data from websites that provide information. You can also use `Celery` to schedule periodic scraping tasks.
 - **Database**: You can store the scraped data in a `PostgreSQL` database.
@@ -57,8 +57,6 @@ user    0m0.431s
 sys     0m0.036s
 
 python3 -m timeit '"-".join(str(n) for n in range(100))'
-
-
 ```
 
 ### Web tools
@@ -74,16 +72,14 @@ python3 -m timeit '"-".join(str(n) for n in range(100))'
 - [`lxml`](https://realpython.com/python-xml-parser/#lxml-use-elementtree-on-steroids)
 
 
-##### Other
+##### Skills set to gain
 
-We’re looking for:
-
-- Previous experience in HTML / API / XML scraping
-- Knowledge of Python or/and JavaScript (or other programming language)
-- Knowledge of CSS/Xpath Selectors
-- Understanding of REST, Ajax
-- Writing Regular Expressions
-- Background with Selenium or other Automation Testing Tools
+- HTML / API / XML scraping
+- Python or/and JavaScript (or other programming language)
+- CSS/Xpath Selectors
+- RESTfull API, Ajax
+- Regular Expressions
+- Selenium or other Automation Testing Tools
 - Good skills to handle big amounts of data
 - Responsible and self-organized person
 - Excellent communication skills
