@@ -1,6 +1,9 @@
 name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
+on:
+  # By default, a workflow only runs when a pull_request event's activity type is opened, synchronize, or reopened
+  pull_request:
+    branches: [$default-branch]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
